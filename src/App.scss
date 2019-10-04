@@ -1,0 +1,107 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+ul {
+  margin: 0;
+  padding: 0 10%;
+}
+
+li {
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.05);
+  background-image: linear-gradient(
+    90deg,
+    #d10000 10px,
+    #eee 10px,
+    #eee 11px,
+    transparent 11px
+  );
+  padding: 10px 15px 10px 25px;
+  border: 1px solid #ccc;
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5);
+  margin-bottom: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+header {
+  height: 7rem;
+  background-color: rgb(252, 252, 252);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.container {
+  max-width: 120rem;
+  //margin: 8rem auto;
+  background-color: #fff;
+
+  .search {
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__input {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      background-color: #f4f2f2; //c1
+      border: none;
+      padding: 0.7rem 2rem;
+      border-radius: 100px;
+      width: 60%;
+      transition: all 0.6s;
+      margin-right: -3.25rem;
+
+      &:focus {
+        outline: none;
+        width: 100%;
+        background-color: #ececec; //c2
+      }
+    }
+
+    &__input:focus + &__button {
+      background-color: #ececec;
+      display: none;
+    }
+
+    &__button {
+      border: none;
+      background: transparent;
+      //background-color: #f4f2f2; // c1
+
+      &:focus {
+        outline: none;
+      }
+
+      &:active {
+        transform: translateY(2px);
+      }
+    }
+    &__icon {
+      height: 1.5rem;
+      width: 1.5rem;
+      background: transparent;
+      fill: rgb(158, 158, 158);
+
+      &.active {
+        fill: red;
+      }
+    }
+  }
+}
+
+.resultado {
+  text-align: center;
+  font-size: 20px;
+  margin: 40px 0;
+}
